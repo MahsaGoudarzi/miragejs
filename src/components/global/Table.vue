@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ config }}
     <v-data-table :headers="headers" :items="users">
       <template v-slot:item.full_name="{ item }">
         {{ item.first_name }} {{ item.last_name }}</template

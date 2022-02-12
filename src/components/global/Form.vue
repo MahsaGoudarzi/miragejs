@@ -53,7 +53,15 @@ export default {
     };
   },
 
+  computed: {
+    coreResource() {
+      let lastIndex = this.config.submitApi.lastIndexOf("/");
+      return this.config.submitApi.substring(0, lastIndex);
+    },
+  },
+
   mounted() {
+    this.getData();
     this.tableHeadersCreator();
   },
 
@@ -69,23 +77,19 @@ export default {
 
     async getData() {
       await axios
-        .get("api/user")
+        .get(`api${this.coreResource}`)
         .then((res) => {
           this.items = res.data.myusers;
           this.items.shift();
-          alert(this.config.onSuccess);
         })
         .catch((err) => alert(this.config.onError));
-    },
-
-    resetForm() {
-      this.$refs.observer.reset();
     },
 
     async submitForm() {
       await axios.post(`api${this.config.submitApi}`, this.model);
       this.model = {};
-      this.getData();
+
+      this.getData().then(alert(this.config.onSuccess));
     },
   },
 };
