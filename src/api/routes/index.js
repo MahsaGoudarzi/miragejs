@@ -1,6 +1,7 @@
 export default function routes() {
   this.namespace = "api";
-  this.resource("users");
+  this.get("users");
+
   this.get("messages", (schema, request) => {
     const {
       queryParams: { userId },
