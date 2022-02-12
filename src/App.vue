@@ -5,7 +5,9 @@
         {{ nav.name }}
       </v-btn>
       <v-spacer></v-spacer>
-      <span class="font-weight-bold grey--text text--lighten-1"> Test Project For Pyango </span>
+      <span class="font-weight-bold grey--text text--lighten-1">
+        Test Project For Pyango
+      </span>
     </v-app-bar>
 
     <v-main>
@@ -24,7 +26,6 @@ export default {
     return {
       navs: [
         { name: "Home", route: "/" },
-        { name: "Users", route: "users" },
         { name: "Members", route: "members" },
       ],
     };
