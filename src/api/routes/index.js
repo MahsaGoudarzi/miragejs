@@ -1,7 +1,6 @@
 export default function routes() {
   this.namespace = "api";
   this.resource("users");
-  this.resource("products");
   this.get("messages", (schema, request) => {
     const {
       queryParams: { userId },
@@ -24,6 +23,10 @@ export default function routes() {
     let result = schema.roots.findBy({ name: root });
 
     return result.uiconfig;
+  });
+
+  this.get("userData", (schema) => {
+    return schema.users.all();
   });
 
   this.passthrough();

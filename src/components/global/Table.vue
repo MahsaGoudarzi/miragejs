@@ -27,7 +27,7 @@ export default {
 
   methods: {
     getData() {
-      fetch("api/users").then((res) => {
+      fetch(`api${this.config.fetchApi}`).then((res) => {
         res.json().then(({ users }) => {
           this.users = users;
         });
