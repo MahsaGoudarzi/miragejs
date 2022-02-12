@@ -78,27 +78,6 @@ export default {
     };
   },
 
-  created() {
-    // fetch("api/users")
-    //   .then((res) => res.json())
-    //   .then(({ users }) => {
-    //     this.products = users;
-    //   });
-    // console.log(this.$route.path);
-    // fetch("api/products").then((res) => {
-    //   console.log("uyta,", res);
-    //   res.json().then(({ products }) => {
-    //     this.products = products;
-    //   });
-    // });
-    // fetch("api/products").then((res) => {
-    //   console.log("uyta,", res);
-    //   res.json().then(({ products }) => {
-    //     this.products = products;
-    //   });
-    // });
-  },
-
   computed: {
     users: () => User.all(),
   },

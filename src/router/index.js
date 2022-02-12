@@ -28,14 +28,4 @@ const router = new VueRouter({
   routes,
 });
 
-// router.beforeEach((to, from, next) => {
-//   console.log("hi", to.path);
-//   fetch(`api/${to.path}/uiconfig`)
-//     .then((res) => res.json())
-//     .then(({ users }) => {
-//       console.log("mahsa", users);
-//     });
-//   next();
-// });
-
 export default router;

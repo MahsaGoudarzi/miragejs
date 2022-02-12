@@ -15,7 +15,6 @@ export default function routes() {
   });
 
   this.post("user/create", (schema, request) => {
-    console.log(request.requestBody);
     const model = JSON.parse(request.requestBody);
     return schema.myusers.create(model);
   });
