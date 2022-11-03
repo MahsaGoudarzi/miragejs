@@ -6,7 +6,7 @@
       </v-btn>
       <v-spacer></v-spacer>
       <span class="font-weight-bold grey--text text--lighten-1">
-        Test Project For Pyango
+        Test Project
       </span>
     </v-app-bar>
 
